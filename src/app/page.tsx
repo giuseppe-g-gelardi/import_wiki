@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { pages } from '../navigation/navigation'
 
 export default function Home() {
     return (
@@ -9,22 +10,4 @@ export default function Home() {
         </main>
     );
 }
-
-type Pages = {
-    page: string,
-    sub_pages: Array<string>
-}
-
-const pages = [
-    {
-        page: 'skyline',
-        sub_pages: ['r32', 'r33', 'r34']
-    },
-    {
-        page: 'chaser',
-        sub_pages: ['jsx90', 'jsx100', 'jsx110']
-    }
-] as Array<Pages>
-
-
 

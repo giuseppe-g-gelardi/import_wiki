@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import Link from "next/link";
+import Navbar from "~/navigation/Navbar";
 
 interface RootLayoutProps {
     children: ReactNode
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             >
                 <AppRouterCacheProvider options={{ enableCssLayer: true }}>
                     <div>
-                        <Link href='/'>Home</Link>
+                        <Navbar />
                         {children}
                     </div>
                 </AppRouterCacheProvider>
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 }
 
 export const metadata: Metadata = {
-    title: "The (JDM) Import Wiki",
+    title: "The Import Wiki",
     description: "Fuck the gatekeepers",
 };
 
